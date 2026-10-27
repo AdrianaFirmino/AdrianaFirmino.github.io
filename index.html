@@ -1,0 +1,561 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100d1c">
+
+    <title>Adriana Firmino | Desenvolvedora</title>
+
+    <meta name="description"
+          content="Conheça Adriana Firmino, seus projetos, estudos e sua trajetória na tecnologia.">
+
+    <style>
+        :root {
+            --background: #100d1c;
+            --surface: #191427;
+            --purple: #a78bfa;
+            --pink: #ed7ac8;
+            --text: #f5f3ff;
+            --muted: #b8b2ca;
+            --border: #302641;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1080px, 90%);
+            margin: auto;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(16, 13, 28, 0.94);
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+        }
+
+        nav {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: var(--purple);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            list-style: none;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .nav-links a:hover {
+            color: var(--purple);
+        }
+
+        .hero {
+            min-height: 590px;
+            display: flex;
+            align-items: center;
+            padding: 90px 0;
+            background:
+                radial-gradient(ellipse at 80% 30%,
+                rgba(139, 92, 246, 0.16), transparent 55%);
+        }
+
+        .eyebrow {
+            color: var(--purple);
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 7vw, 4.8rem);
+            line-height: 1.12;
+            margin: 20px 0;
+            letter-spacing: -2px;
+        }
+
+        h1 span {
+            background: linear-gradient(90deg, var(--purple), var(--pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: var(--muted);
+            font-size: 1.08rem;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 22px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-weight: 700;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            border-color: var(--purple);
+        }
+
+        .button.primary {
+            background: linear-gradient(100deg, #8b5cf6, #c084fc);
+            color: #160e26;
+            border: none;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-heading {
+            margin-bottom: 35px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin-bottom: 8px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 26px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--purple);
+        }
+
+        .card-icon {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .tag {
+            padding: 5px 10px;
+            border-radius: 7px;
+            background: #282039;
+            color: #d8c9ff;
+            font-size: 0.8rem;
+        }
+
+        .experience {
+            background: #151020;
+        }
+
+        .experience-card {
+            max-width: 760px;
+            padding: 28px;
+            border-left: 3px solid var(--purple);
+            background: var(--surface);
+            border-radius: 0 12px 12px 0;
+        }
+
+        .experience-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .experience-card p {
+            color: var(--muted);
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: var(--muted);
+            margin-top: 10px;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 25px 0;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 18px 0;
+            }
+
+            .nav-links {
+                gap: 12px 16px;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 80px 0;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            h1 {
+                letter-spacing: -1px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *, *::before, *::after {
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="container">
+            <a class="logo" href="#inicio">Adriana<span>.</span></a>
+
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#tecnologias">Tecnologias</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="container">
+                <span class="eyebrow">Portfólio de desenvolvimento</span>
+
+                <h1>
+                    Olá, eu sou<br>
+                    <span>Adriana Firmino.</span>
+                </h1>
+
+                <p>
+                    Sou uma desenvolvedora em constante aprendizado,
+                    criando projetos e explorando soluções com tecnologia.
+                    Aqui você pode conhecer meu trabalho, minha formação
+                    e minha jornada na programação.
+                </p>
+
+                <div class="buttons">
+                    <a class="button primary" href="#projetos">
+                        Conheça meus projetos
+                    </a>
+
+                    <a class="button" href="#contato">
+                        Entre em contato
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Quem sou</span>
+                    <h2>Sobre mim</h2>
+                </div>
+
+                <p>
+                    Minha trajetória na tecnologia é construída por meio
+                    de estudos, prática e desenvolvimento de projetos.
+                    Gosto de transformar ideias em soluções funcionais
+                    e aprender novas ferramentas durante esse processo.
+                </p>
+
+                <p style="margin-top: 14px;">
+                    Neste espaço, compartilho meus projetos, as tecnologias
+                    que utilizo, os cursos que realizo e as experiências
+                    que contribuem para meu crescimento profissional.
+                </p>
+            </div>
+        </section>
+
+        <section id="projetos">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">O que estou construindo</span>
+                    <h2>Projetos em destaque</h2>
+                    <p>Conheça alguns dos meus projetos de tecnologia.</p>
+                </div>
+
+                <div class="grid">
+                    <article class="card">
+                        <div class="card-icon">🎮</div>
+                        <h3>Square Puzzle</h3>
+                        <p>
+                            Jogo de quebra-cabeça desenvolvido com Godot,
+                            com mecânicas de combinação de quadrados,
+                            pontuação, recordes, configurações e suporte
+                            a português e inglês.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Godot</span>
+                            <span class="tag">GDScript</span>
+                            <span class="tag">Android</span>
+                            <span class="tag">AdMob</span>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">☕</div>
+                        <h3>ForumHub</h3>
+                        <p>
+                            Projeto de API para um fórum, com recursos
+                            de tópicos, persistência de dados e
+                            autenticação.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">JWT</span>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">📚</div>
+                        <h3>Mafisbook</h3>
+                        <p>
+                            Projeto de caderno de estudos digital,
+                            pensado para organizar anotações e explorar
+                            recursos de inteligência artificial.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">IA</span>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">🌱</div>
+                        <h3>EnergiAI</h3>
+                        <p>
+                            Projeto relacionado a um hackathon de
+                            sustentabilidade, com foco no consumo
+                            energético e em soluções apoiadas por IA.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Hackathon</span>
+                            <span class="tag">Sustentabilidade</span>
+                            <span class="tag">Inteligência artificial</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="tecnologias" class="experience">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Ferramentas e aprendizado</span>
+                    <h2>Tecnologias</h2>
+                    <p>
+                        Tecnologias e ferramentas que utilizo nos meus projetos.
+                    </p>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Spring Boot</span>
+                    <span class="tag">GDScript</span>
+                    <span class="tag">Godot Engine</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">Git</span>
+                    <span class="tag">GitHub</span>
+                    <span class="tag">APIs REST</span>
+                    <span class="tag">JWT</span>
+                    <span class="tag">Google AdMob</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="formacao">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Minha jornada</span>
+                    <h2>Formação e experiências</h2>
+                    <p>
+                        Um espaço para conhecer minha formação e minhas
+                        experiências de aprendizado em tecnologia.
+                    </p>
+                </div>
+
+                <div class="grid">
+                    <article class="card">
+                        <div class="card-icon">🎓</div>
+                        <h3>Cursos Alura</h3>
+                        <p>
+                            Cursos e formações realizados na plataforma,
+                            com conteúdos estudados e certificados
+                            disponíveis quando aplicável.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">🚀</div>
+                        <h3>Programa ONE</h3>
+                        <p>
+                            Minha trajetória de formação e aprendizado
+                            por meio do Oracle Next Education.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">💡</div>
+                        <h3>Hackathon EnergiAI</h3>
+                        <p>
+                            Participação em uma iniciativa de desenvolvimento
+                            colaborativo com foco em sustentabilidade.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact">
+            <div class="container">
+                <span class="eyebrow">Vamos conversar?</span>
+                <h2>Entre em contato</h2>
+
+                <p>
+                    Você pode conhecer meus projetos e acompanhar
+                    minha jornada profissional pelos meus perfis.
+                </p>
+
+                <div class="buttons" style="justify-content: center;">
+                    <a class="button primary"
+                       href="https://github.com/AdrianaFirmino"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Meu GitHub
+                    </a>
+
+                    <a class="button"
+                       href="https://www.linkedin.com/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                © <span id="year"></span> Adriana Firmino.
+                Desenvolvido com dedicação.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
