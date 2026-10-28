@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -146,6 +146,7 @@
             font-weight: 700;
             text-align: center;
             transition: transform 0.2s, border-color 0.2s;
+            cursor: pointer;
         }
 
         .button:hover {
@@ -246,8 +247,25 @@
             margin-top: 10px;
         }
 
+        /* Mantém os botões de contato visíveis */
         .contact .buttons {
+            display: flex;
+            flex-wrap: wrap;
             justify-content: center;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .contact .buttons .button {
+            display: inline-block;
+            visibility: visible;
+            opacity: 1;
+            position: relative;
+            color: var(--text);
+        }
+
+        .contact .buttons .button.primary {
+            color: #160e26;
         }
 
         footer {
@@ -285,6 +303,16 @@
             h1 {
                 letter-spacing: -1px;
             }
+
+            .contact .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact .buttons .button {
+                width: 100%;
+                max-width: 320px;
+            }
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -318,6 +346,7 @@
 
     <main>
 
+        <!-- Início -->
         <section class="hero" id="inicio">
             <div class="container">
                 <span class="eyebrow">Portfólio de desenvolvimento</span>
@@ -346,6 +375,7 @@
             </div>
         </section>
 
+        <!-- Sobre mim -->
         <section id="sobre">
             <div class="container">
                 <div class="section-heading">
@@ -368,6 +398,7 @@
             </div>
         </section>
 
+        <!-- Projetos -->
         <section id="projetos">
             <div class="container">
                 <div class="section-heading">
@@ -499,4 +530,183 @@
 
                         <div class="tags">
                             <span class="tag">JavaScript</span>
-                            <span class
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+
+                        <div class="buttons">
+                            <a class="button primary"
+                               href="https://github.com/AdrianaFirmino/amigo-secreto"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Ver repositório
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- EnergiAI -->
+                    <article class="card">
+                        <div class="card-icon">🌱</div>
+                        <h3>EnergiAI</h3>
+                        <p>
+                            Projeto de hackathon voltado à sustentabilidade
+                            e ao consumo energético, desenvolvido no
+                            contexto de uma iniciativa colaborativa.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Hackathon</span>
+                            <span class="tag">Sustentabilidade</span>
+                            <span class="tag">Inteligência artificial</span>
+                        </div>
+
+                        <div class="buttons">
+                            <a class="button primary"
+                               href="https://github.com/No-Country-simulation/g9-br-team-09"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Ver repositório da equipe
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Tecnologias -->
+        <section id="tecnologias" class="experience">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Ferramentas e aprendizado</span>
+                    <h2>Tecnologias</h2>
+                    <p>
+                        Tecnologias e ferramentas utilizadas nos meus
+                        projetos de desenvolvimento.
+                    </p>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Spring Boot</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">GDScript</span>
+                    <span class="tag">Godot Engine</span>
+                    <span class="tag">Git</span>
+                    <span class="tag">GitHub</span>
+                    <span class="tag">APIs REST</span>
+                    <span class="tag">JWT</span>
+                    <span class="tag">Google AdMob</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formação e experiências -->
+        <section id="formacao">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Minha jornada</span>
+                    <h2>Formação e experiências</h2>
+                    <p>
+                        Conheça minha formação e minhas experiências
+                        de aprendizado em tecnologia.
+                    </p>
+                </div>
+
+                <div class="grid">
+
+                    <article class="card">
+                        <div class="card-icon">🎓</div>
+                        <h3>Cursos Alura</h3>
+                        <p>
+                            Cursos e formações realizados na plataforma,
+                            com conteúdos estudados e certificados
+                            disponíveis quando aplicável.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">🚀</div>
+                        <h3>Programa ONE</h3>
+                        <p>
+                            Minha trajetória de formação e aprendizado
+                            por meio do Oracle Next Education.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">💡</div>
+                        <h3>Hackathon EnergiAI</h3>
+                        <p>
+                            Participação em uma iniciativa de
+                            desenvolvimento colaborativo com foco
+                            em sustentabilidade e consumo energético.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="contact">
+            <div class="container">
+                <span class="eyebrow">Vamos conversar?</span>
+                <h2>Entre em contato</h2>
+
+                <p>
+                    Você pode conhecer meus projetos e acompanhar
+                    minha jornada profissional pelos meus perfis.
+                </p>
+
+                <div class="buttons">
+
+                    <a class="button primary"
+                       href="https://github.com/AdrianaFirmino"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Meu GitHub
+                    </a>
+
+                    <a class="button"
+                       href="https://www.linkedin.com/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Meu LinkedIn
+                    </a>
+
+                    <!-- Botão de e-mail profissional -->
+                    <a class="button"
+                       id="email-button"
+                       href="mailto:adrianafirmino.developer@gmail.com"
+                       style="display: inline-block; visibility: visible; opacity: 1;">
+                        Enviar e-mail profissional
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                © <span id="year"></span> Adriana Firmino.
+                Desenvolvido com dedicação.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
