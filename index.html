@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -146,7 +145,6 @@
             font-weight: 700;
             text-align: center;
             transition: transform 0.2s, border-color 0.2s;
-            cursor: pointer;
         }
 
         .button:hover {
@@ -247,25 +245,8 @@
             margin-top: 10px;
         }
 
-        /* Mantém os botões de contato visíveis */
         .contact .buttons {
-            display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .contact .buttons .button {
-            display: inline-block;
-            visibility: visible;
-            opacity: 1;
-            position: relative;
-            color: var(--text);
-        }
-
-        .contact .buttons .button.primary {
-            color: #160e26;
         }
 
         footer {
@@ -303,16 +284,6 @@
             h1 {
                 letter-spacing: -1px;
             }
-
-            .contact .buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .contact .buttons .button {
-                width: 100%;
-                max-width: 320px;
-            }
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -346,7 +317,6 @@
 
     <main>
 
-        <!-- Início -->
         <section class="hero" id="inicio">
             <div class="container">
                 <span class="eyebrow">Portfólio de desenvolvimento</span>
@@ -375,7 +345,6 @@
             </div>
         </section>
 
-        <!-- Sobre mim -->
         <section id="sobre">
             <div class="container">
                 <div class="section-heading">
@@ -398,7 +367,6 @@
             </div>
         </section>
 
-        <!-- Projetos -->
         <section id="projetos">
             <div class="container">
                 <div class="section-heading">
@@ -458,10 +426,10 @@
 
                         <div class="buttons">
                             <a class="button primary"
-                               href="https://github.com/AdrianaFirmino/forumhub"
+                               href="https://github.com/AdrianaFirmino"
                                target="_blank"
                                rel="noopener noreferrer">
-                                Ver repositório
+                                Conhecer no GitHub
                             </a>
                         </div>
                     </article>
@@ -574,7 +542,6 @@
             </div>
         </section>
 
-        <!-- Tecnologias -->
         <section id="tecnologias" class="experience">
             <div class="container">
                 <div class="section-heading">
@@ -606,7 +573,6 @@
             </div>
         </section>
 
-        <!-- Formação e experiências -->
         <section id="formacao">
             <div class="container">
                 <div class="section-heading">
@@ -653,7 +619,6 @@
             </div>
         </section>
 
-        <!-- Contato -->
         <section id="contato" class="contact">
             <div class="container">
                 <span class="eyebrow">Vamos conversar?</span>
@@ -665,7 +630,6 @@
                 </p>
 
                 <div class="buttons">
-
                     <a class="button primary"
                        href="https://github.com/AdrianaFirmino"
                        target="_blank"
@@ -675,38 +639,55 @@
 
                     <a class="button"
                        href="https://www.linkedin.com/"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Meu LinkedIn
-                    </a>
 
-                    <!-- Botão de e-mail profissional -->
-                    <a class="button"
-                       id="email-button"
-                       href="mailto:adrianafirmino.developer@gmail.com"
-                       style="display: inline-block; visibility: visible; opacity: 1;">
-                        Enviar e-mail profissional
+                       target="_blank"
+
+                       rel="noopener noreferrer">
+
+                        LinkedIn
+
                     </a>
 
                 </div>
+
             </div>
+
         </section>
+
+
 
     </main>
 
+
+
     <footer>
+
         <div class="container">
+
             <p>
+
                 © <span id="year"></span> Adriana Firmino.
+
                 Desenvolvido com dedicação.
+
             </p>
+
         </div>
+
     </footer>
 
+
+
     <script>
+
         document.getElementById("year").textContent =
+
             new Date().getFullYear();
+
     </script>
 
+
+
 </body>
-</html>
+
+</html>      adicione o link do repositorio do forumhub e um link para o meu email profisional  adrianafirmino.developer@gmail.com
