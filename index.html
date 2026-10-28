@@ -96,8 +96,11 @@
             align-items: center;
             padding: 90px 0;
             background:
-                radial-gradient(ellipse at 80% 30%,
-                rgba(139, 92, 246, 0.16), transparent 55%);
+                radial-gradient(
+                    ellipse at 80% 30%,
+                    rgba(139, 92, 246, 0.16),
+                    transparent 55%
+                );
         }
 
         .eyebrow {
@@ -132,7 +135,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 14px;
-            margin-top: 30px;
+            margin-top: 24px;
         }
 
         .button {
@@ -141,6 +144,7 @@
             border: 1px solid var(--border);
             border-radius: 10px;
             font-weight: 700;
+            text-align: center;
             transition: transform 0.2s, border-color 0.2s;
         }
 
@@ -179,6 +183,9 @@
         }
 
         .card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 16px;
@@ -221,24 +228,13 @@
             font-size: 0.8rem;
         }
 
+        .card .buttons {
+            margin-top: auto;
+            padding-top: 22px;
+        }
+
         .experience {
             background: #151020;
-        }
-
-        .experience-card {
-            max-width: 760px;
-            padding: 28px;
-            border-left: 3px solid var(--purple);
-            background: var(--surface);
-            border-radius: 0 12px 12px 0;
-        }
-
-        .experience-card h3 {
-            margin-bottom: 8px;
-        }
-
-        .experience-card p {
-            color: var(--muted);
         }
 
         .contact {
@@ -248,6 +244,10 @@
         .contact p {
             color: var(--muted);
             margin-top: 10px;
+        }
+
+        .contact .buttons {
+            justify-content: center;
         }
 
         footer {
@@ -317,6 +317,7 @@
     </header>
 
     <main>
+
         <section class="hero" id="inicio">
             <div class="container">
                 <span class="eyebrow">Portfólio de desenvolvimento</span>
@@ -372,73 +373,172 @@
                 <div class="section-heading">
                     <span class="eyebrow">O que estou construindo</span>
                     <h2>Projetos em destaque</h2>
-                    <p>Conheça alguns dos meus projetos de tecnologia.</p>
+                    <p>
+                        Conheça alguns dos meus projetos de tecnologia
+                        e explore seus códigos no GitHub.
+                    </p>
                 </div>
 
                 <div class="grid">
+
+                    <!-- Square Puzzle -->
                     <article class="card">
                         <div class="card-icon">🎮</div>
                         <h3>Square Puzzle</h3>
                         <p>
                             Jogo de quebra-cabeça desenvolvido com Godot,
-                            com mecânicas de combinação de quadrados,
-                            pontuação, recordes, configurações e suporte
-                            a português e inglês.
+                            com combinação de quadrados, pontuação,
+                            recordes, configurações e suporte aos idiomas
+                            português e inglês.
                         </p>
+
                         <div class="tags">
-                            <span class="tag">Godot</span>
+                            <span class="tag">Godot Engine</span>
                             <span class="tag">GDScript</span>
                             <span class="tag">Android</span>
-                            <span class="tag">AdMob</span>
+                            <span class="tag">Google AdMob</span>
+                        </div>
+
+                        <div class="buttons">
+                            <a class="button primary"
+                               href="https://github.com/AdrianaFirmino"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Conhecer no GitHub
+                            </a>
                         </div>
                     </article>
 
+                    <!-- ForumHub -->
                     <article class="card">
                         <div class="card-icon">☕</div>
                         <h3>ForumHub</h3>
                         <p>
-                            Projeto de API para um fórum, com recursos
-                            de tópicos, persistência de dados e
-                            autenticação.
+                            API para um fórum, com gerenciamento de tópicos,
+                            persistência de dados e autenticação com tokens.
                         </p>
+
                         <div class="tags">
                             <span class="tag">Java</span>
                             <span class="tag">Spring Boot</span>
                             <span class="tag">PostgreSQL</span>
                             <span class="tag">JWT</span>
                         </div>
-                    </article>
 
-                    <article class="card">
-                        <div class="card-icon">📚</div>
-                        <h3>Mafisbook</h3>
-                        <p>
-                            Projeto de caderno de estudos digital,
-                            pensado para organizar anotações e explorar
-                            recursos de inteligência artificial.
-                        </p>
-                        <div class="tags">
-                            <span class="tag">Java</span>
-                            <span class="tag">Spring Boot</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">IA</span>
+                        <div class="buttons">
+                            <a class="button primary"
+                               href="https://github.com/AdrianaFirmino"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Conhecer no GitHub
+                            </a>
                         </div>
                     </article>
 
+                    <!-- Conversor de Moedas -->
+                    <article class="card">
+                        <div class="card-icon">💱</div>
+                        <h3>Conversor de Moedas</h3>
+                        <p>
+                            Aplicação desenvolvida em Java para realizar
+                            conversões entre moedas utilizando taxas
+                            de câmbio.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">API de câmbio</span>
+                        </div>
+
+                        <div class="buttons">
+                            <a class="button primary"
+                               href="https://github.com/AdrianaFirmino/moedasConversor"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Ver repositório
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Literalura -->
+                    <article class="card">
+                        <div class="card-icon">📚</div>
+                        <h3>Literalura</h3>
+                        <p>
+                            Aplicação de catálogo de livros que utiliza
+                            uma API para buscar informações sobre obras
+                            e autores e permite trabalhar com os dados
+                            armazenados.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">JPA</span>
+                            <span class="tag">Gutendex API</span>
+                        </div>
+
+                        <div class="buttons">
+                            <a class="button primary"
+                               href="https://github.com/AdrianaFirmino/literalura"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Ver repositório
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Amigo Secreto -->
+                    <article class="card">
+                        <div class="card-icon">🎁</div>
+                        <h3>Amigo Secreto</h3>
+                        <p>
+                            Aplicação para adicionar participantes
+                            e realizar o sorteio de amigo secreto.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+
+                        <div class="buttons">
+                            <a class="button primary"
+                               href="https://github.com/AdrianaFirmino/amigo-secreto"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Ver repositório
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- EnergiAI -->
                     <article class="card">
                         <div class="card-icon">🌱</div>
                         <h3>EnergiAI</h3>
                         <p>
-                            Projeto relacionado a um hackathon de
-                            sustentabilidade, com foco no consumo
-                            energético e em soluções apoiadas por IA.
+                            Projeto de hackathon voltado à sustentabilidade
+                            e ao consumo energético, desenvolvido no
+                            contexto de uma iniciativa colaborativa.
                         </p>
+
                         <div class="tags">
                             <span class="tag">Hackathon</span>
                             <span class="tag">Sustentabilidade</span>
                             <span class="tag">Inteligência artificial</span>
                         </div>
+
+                        <div class="buttons">
+                            <a class="button primary"
+                               href="https://github.com/No-Country-simulation/g9-br-team-09"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Ver repositório da equipe
+                            </a>
+                        </div>
                     </article>
+
                 </div>
             </div>
         </section>
@@ -449,19 +549,22 @@
                     <span class="eyebrow">Ferramentas e aprendizado</span>
                     <h2>Tecnologias</h2>
                     <p>
-                        Tecnologias e ferramentas que utilizo nos meus projetos.
+                        Tecnologias e ferramentas utilizadas nos meus
+                        projetos de desenvolvimento.
                     </p>
                 </div>
 
                 <div class="tags">
                     <span class="tag">Java</span>
                     <span class="tag">Spring Boot</span>
-                    <span class="tag">GDScript</span>
-                    <span class="tag">Godot Engine</span>
-                    <span class="tag">PostgreSQL</span>
-                    <span class="tag">SQL</span>
+                    <span class="tag">JavaScript</span>
                     <span class="tag">HTML</span>
                     <span class="tag">CSS</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">GDScript</span>
+                    <span class="tag">Godot Engine</span>
                     <span class="tag">Git</span>
                     <span class="tag">GitHub</span>
                     <span class="tag">APIs REST</span>
@@ -477,12 +580,13 @@
                     <span class="eyebrow">Minha jornada</span>
                     <h2>Formação e experiências</h2>
                     <p>
-                        Um espaço para conhecer minha formação e minhas
-                        experiências de aprendizado em tecnologia.
+                        Conheça minha formação e minhas experiências
+                        de aprendizado em tecnologia.
                     </p>
                 </div>
 
                 <div class="grid">
+
                     <article class="card">
                         <div class="card-icon">🎓</div>
                         <h3>Cursos Alura</h3>
@@ -506,10 +610,12 @@
                         <div class="card-icon">💡</div>
                         <h3>Hackathon EnergiAI</h3>
                         <p>
-                            Participação em uma iniciativa de desenvolvimento
-                            colaborativo com foco em sustentabilidade.
+                            Participação em uma iniciativa de
+                            desenvolvimento colaborativo com foco
+                            em sustentabilidade e consumo energético.
                         </p>
                     </article>
+
                 </div>
             </div>
         </section>
@@ -524,7 +630,7 @@
                     minha jornada profissional pelos meus perfis.
                 </p>
 
-                <div class="buttons" style="justify-content: center;">
+                <div class="buttons">
                     <a class="button primary"
                        href="https://github.com/AdrianaFirmino"
                        target="_blank"
@@ -541,6 +647,7 @@
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer>
